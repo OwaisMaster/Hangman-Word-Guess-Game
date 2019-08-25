@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+<body>
+    <h1 class="display-1"> Hangman <h3 class='text-muted'> Press any key to begin </h3>
+    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="assets/images/hangman-1.jpg" id="img">
+            </div>
+            <div class="col" id="text">
+                <div class="">
+                    Current word <span id= "lett"></span>
+                </div>
+                <div class="" id="guess">
+
+                </div>
+                <div class="" id="letters">
+                    Letters Guessed:
+                </div>
+            </div>
+            <div class="col" id="guess">
+                <div>
+                    Wins:
+                    <span id="wins"> </span>
+                </div>
+                <div>
+                    Guesses remaining:
+                </div>
+                <div class="" id="guesses">
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            startGame();
+            document.onkeypress = function (event) {
+                var letter = event.key;
+                guessLetter(letter);
+            }
+        </script>
+</body>
+
+</html>
